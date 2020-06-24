@@ -1,0 +1,228 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3/10/2018, 09:51:56 AM
+    Author     : diego
+*/
+@font-face {
+    font-family: Inconsolata;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../Fonts/Inconsolata-Regular.ttf);
+}
+@font-face {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../Fonts/Ubuntu-Regular.ttf);
+}
+@font-face {
+    font-family: Anton;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../Fonts/Anton-Regular.ttf);
+}
+@font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../Fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../Fonts/RobotoCondensed-Regular.ttf);
+}
+* {
+    margin:0px;
+    padding:0px;
+}
+html {
+     height: 100%;
+}
+body {
+    height: 100%;
+    margin-top: 0px;
+}
+
+div.DDImagenU{
+    background-image: url("../IMGS/FondoMU.png");
+    margin: auto;
+    min-height: 47%; 
+    min-width: 100%;
+    text-align: left;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 2px solid #E1E1E1;
+}
+div.DDATexto{
+    height: 230px;
+    width: 1000px;
+    margin-left: 90px;
+    margin-top: 50px;
+}
+p.DPLetraRU{
+    font-family: Inconsolata;
+    color: #F5F5F5;
+    font-size: 79px;
+    text-decoration: underline #2CC229;
+    -webkit-text-stroke: 1px #F1F1F1;
+}
+div.DDMenuR{
+    z-index: 2;
+    top: 0%;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: fixed;
+}
+button.DBBotonRU{
+    border-radius: 6px;
+    border: none;
+    margin-left: 30px;
+    margin-top: 10px;
+    height: 32px;
+    width: 125px;
+    float: left;
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 17px;
+    color: white;
+    background-color: black;
+    transition: all 500ms ease;
+}
+button.DBBotonRU:hover{
+    background-color: white;
+    color: black;
+}
+div.DDLetraRD{
+    text-align: center;
+    font-family: Anton;
+    font-size: 30px;
+    height: 20px;
+    color: white;
+    width: 600px;
+    margin-left: 500px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+div.DDFormuR{
+    height: 180%;
+    width: 100%;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    background-color: #FAFAFA;
+}
+div.DDFormuRU{
+    height: 1000px;
+    border: none;
+    width: 1100px;							 
+    position: absolute;        
+    left: 50%;
+    margin-left: -550px; /*W*/       
+    margin-top: 70px;
+    margin-bottom: 1%;
+    padding: 25px;
+}
+p.DPLetraRT{
+    font-family: Inconsolata;
+    font-size: 38px;
+    color: #2A2A2A;
+    font-weight: bold;
+}
+p.DPLetraRCu{
+    font-family: Montserrat;
+    font-size: 26px;
+    color: #686868;
+}
+input[type=text]{
+    height: 39px;
+    width: 700px;
+    font-size: 17px;
+    padding-left: 16px;
+    border-bottom: 2px solid #2CC229;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: #FAFAFA;
+    color: #898989;
+}
+input[type=password]{
+    height: 39px;
+    width: 700px;
+    font-size: 17px;
+    padding-left: 16px;
+    border-bottom: 2px solid #2CC229;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: #FAFAFA;
+    color: #898989;
+}
+input[type=date]{
+    height: 39px;
+    width: 700px;
+    font-size: 17px;
+    padding-left: 16px;
+    border-bottom: 2px solid #2CC229;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: #FAFAFA;
+    color: #898989;
+}
+label{
+    font-family: Roboto Condensed;
+    font-size: 23px;
+    color: #303030;
+    font-style: italic;
+    font-weight: bold;
+}
+select{
+    height: 32px;
+    width: 180px;
+    border-radius: 10px;
+    background-color: white;
+    padding-left: 5px;
+    color: #3CD839;
+    font-size: 17px;
+    border: 3px solid #3CD839;
+    margin-top: 5px;
+}
+input[type=submit]{
+    border: none;
+    background: #2CC229;
+    color: #F9F9F9;
+    height: 40px;
+    width: 200px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: all 500ms ease;
+}
+input[type=submit]:hover{
+    background: rgba(0,0,0,0);
+    color: #2CC229;
+    box-shadow: inset 0 0 0 3px #2CC229;
+}
+input[type=button]:hover{
+    background: rgba(0,0,0,0);
+    color: #2CC229;
+    box-shadow: inset 0 0 0 3px #2CC229;
+}
+input[type=button]{
+    border: none;
+    background: #2CC229;
+    color: #F9F9F9;
+    height: 40px;
+    width: 200px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: all 500ms ease;
+}

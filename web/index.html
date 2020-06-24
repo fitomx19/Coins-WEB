@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Coins Proyect</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="IMGS/favicon.ico" rel='shortcut icon' type='image/x-icon'>
+        <link href="CSS/Style.css" rel="stylesheet" type="text/css">
+        <link href="CSS/StyleU.css" rel="stylesheet" type="text/css">
+        <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/alertify.min.js"></script>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/alertify.min.css"/>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/themes/default.min.css"/>
+    <script>
+        function noback(){
+   window.location.hash="no-back-button";
+   window.location.hash="Again-No-back-button"
+   window.onhashchange=function(){window.location.hash="no-back-button";}
+}
+        </script>
+        
+        <script type="text/javascript" src="JS/sha.js"></script>
+        <script type="text/javascript">
+  function getHash(form){
+		var hashInput = document.getElementById("cadena");
+		var hash = new jsSHA(hashInput.value, "TEXT");
+		var hashOutput = document.getElementById("resultado");
+		hashOutput.value = hash.getHash("SHA-512","HEX");
+		console.log(hashInput.value);
+		
+	}
+        </script>
+        <script>
+            (document).bind("contextmenu",function(e) {
+ e.preventDefault();
+});
+$(document).keydown(function(e){
+    if(e.which === 123){
+       return false;
+    }
+});
+            </script>
+            
+    </head>
+    
+    <noscript>
+	<meta http-equiv="refresh" content="0;nojs.html">
+</noscript>
+
+  <body onload="noback();" ondragstart="return false;" ondrop="return false;" oncontextmenu="return false"  > 
+        <div class="DDMenuB">
+            <div class="DDLetraU">SOFTCONOMY</div>
+           
+            <div class="DDBotonesU">
+                <a href="#Inicio"><button class="DBBotonU">Inicio</button></a>
+                <a href="#Sobres"><button class="DBBotonD">Sobre Nosotros</button></a>
+                <a href="Registro/Registrarse.jsp"><button class="DBBotonT">Comencemos</button>
+                <a href="Admin/login.html"><button class="DBBotonD">Administradores</button>
+                    
+            </div>
+        </div><a name="Inicio" id="a"></a>
+        <div class="DDImagen">
+            
+            <div class="DDInicioS">
+                <p class="DPLetraT">Adelante, Inicie en Nuestro Sistema.</p>
+                <br>
+                <p class="DPLetraU">Sigue viviendo una gran experiencia de ahorro con diversos metodos.</p>
+                <br>
+                <form method="post" name="authForm" action="App/Validar.jsp">
+                    <label class="DLNomUsuario">Nombre de Usuario:</label><br>
+                    <input type="text" name="INomUsuario" class="DITextoU" placeholder="Usuario">
+                    <br><br>
+                    <label class="DLContraUsuario">Contraseña:</label><br>
+                   
+                    <input type="password" name="account"   class="DIContraU" id="cadena" placeholder="Contraseña"> 
+                    <input type="hidden" name="resultado" id="resultado" size="100">
+                    <br><br><br>
+                   <input type="submit" class="DIBotonU" value='Comenzar'onclick="getHash(authForm)"> 
+                </form>
+                <br><br>
+                <p class="DPLetraDi">Puedes acceder al registro en el apartado de "Comencemos"</p>
+            </div>
+            <div class="DDFrase">
+                <p class="DPLetraD">Ahorrar no es sólo guardar, sino saber gastar.</p>
+                <p class="DPLetraC">"Fernando Summers"</p>
+            </div>
+        </div>
+        
+        <div class="DDInfotmacion">
+            <div class="DDInfotmacionU">
+                <p class="DPLetraCi">¿Eres Nuevo?...</p><br>
+                <p class="DPLetraSe">¡Bienvenido al Proyecto Coins!, un sistema el cual fue diseñado para dar a los Usuarios de bajos ingresos un método de ahorro eficiente y con ello 
+                    tengan una buena administración de sus cuentas, al igual que llevamos un seguimiento para el usuario de su ahorro y sus gastos mediante una proyección de ahorro 
+                    dependiendo si este es a corto, mediano o largo plazo. Con esto podrás visualizar cada semana un avance de ahorro y seguir motivado a ahorrar.</p>
+                <img src="IMGS/LogoCoin.png" class="DImLogoU"><br><br>
+                <p class="DPLetraSi">Ahora que sabes cómo funciona el proyecto puedes ser parte de nuestro sistema dando click en el botón de registrar y registrarte en nuestro sistema 
+                    para ser parte de la experiencia de ahorro con el Proyecto Coins.</p><br><br>
+                <button class="DBBotonC">Registrarse</button>
+                <br><br><br>
+                <p class="DPLetraO">Si quieres conocer más sobre nosotros sigue bajando o aprieta el apartado de “Sobre Nosotros”.</p>
+                <a name="Sobres" id="b"></a>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <hr class="DHRLineaU"><br>
+                <hr class="DHRLineaD"><br>
+                <hr class="DHRLineaT"><br><br>
+                <p class="DPLetraNu">¡Sobre Nosotros!</p><br><br>
+                <hr class="DHRLineaT"><br>
+                <hr class="DHRLineaD"><br>
+                <hr class="DHRLineaU"><br><br>
+                <p class="DPLetraCi">SOFTCONOMY</p><br>
+                <p class="DPLetraSe">Somos una empresa de desarrollo de software que contribuye a la resolución de problemas sociales a través de la creación de herramientas tecnológicas 
+                    que faciliten las actividades de nuestros usuarios en el día a día.</p><br>
+                <p class="DPLetraSe">Nuestra visión es ser líderes en el mercado de desarrollo de software aportando herramientas tecnológicas cuyo beneficio se vea reflejado a corto plazo
+                    mejorando así la calidad de vida de nuestros usuarios. </p><br>
+                <p class="DPLetraSe">Nuestos Objetivos son desarrollar software innovador y accesible que marque tendencias, centrado en ayudar a resolver y agilizar situaciones y 
+                    problemáticas de la vida cotidiana.</p><br>
+                <p class="DPLetraSe">Al igual que Proporcionar una herramienta que permita una mejor administración de ingresos y presente técnicas de ahorro a familias mexicanas cuyos 
+                    ingresos no tienden a ser estables.</p><br><br>
+                <img src="IMGS/SCLogo.png" class="DImLogoD"><br><br>
+                <p class="DPLetraCi">Filosofía</p><br>
+                <p class="DPLetraSe">Actualmente disponemos de un gran poder: el conocimiento tecnológico y amplio acceso a la información. Sin embargo, diferentes empresas, personas y 
+                    comunidades aún no cuentan con herramientas tecnológicas que simplifiquen sus actividades diarias  o resuelvan problemas de la vida cotidiana. Por lo cual, esta empresa 
+                    pretende satisfacer a los usuarios, brindándoles diferentes herramientas y oportunidades en forma de software para  con ayuda de la innovación, adecuar la tecnología a la 
+                    palma de su mano y maximizar su potencial.</p><br><br><br>
+                <hr class="DHRLineaU"><br>
+                <hr class="DHRLineaD"><br>
+                <hr class="DHRLineaT"><br><br>
+                <p class="DPLetraO">GRACIAS POR SU TIEMPO, DISFRUTA TU ESTANCIA EN EL SISTEMA.</p><br><br>
+                <hr class="DHRLineaT"><br>
+                <hr class="DHRLineaD"><br>
+                <hr class="DHRLineaU"><br><br>
+            </div>           
+        </div>
+        <div class="DDInfotmacionD">
+            
+        </div>
+      
+        
+  <script type="text/javascript">
+        $(document).ready(function () {
+            //Disable cut copy paste
+            $('body').bind('cut copy paste', function (e) {
+                e.preventDefault();
+            });
+
+            //Disable mouse right click
+            $("body").on("contextmenu",function(e){
+                return false;
+            });
+});
+</script>
+       
+   
+    </body>
+</html>

@@ -1,0 +1,416 @@
+
+@font-face {
+    font-family: Anton;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../Fonts/Anton-Regular.ttf);
+}
+@font-face {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../Fonts/Ubuntu-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+}
+
+body {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+
+/* Style the header */
+div.header {
+    z-index: 1;
+    top: 0%;
+    width: 100%;
+    height: 60px;
+    background-color: #2CB229;
+    position: fixed;
+    margin: auto;
+
+}
+div.DDLineal{
+    float: right;
+    margin-right: 28px;
+    height: 40px;
+    width: 350px;
+    border: none;
+    margin-top: 13px;
+    z-index: -1;
+}
+div.DDLista{
+    float: left;
+    height: 40px;
+    width: 350px;
+    border: none;
+    margin-top: 10px;
+    z-index: -1;
+    margin-left: 50px;
+}
+button.DBPerfil{
+    border-radius: 6px;
+    border: none;
+    margin-left: 10px;
+    height: 33px;
+    width: 110px;
+    float: left;
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 19px;
+    color: white;
+    background-color: #2CB229;
+    transition: all 500ms ease;
+}
+button.DBPerfil:hover{
+    background-color: white;
+    color: #2CB229;
+}
+button.DBCerrar{
+    border-radius: 6px;
+    border: none;
+    margin-left: 10px;
+    height: 33px;
+    width: 140px;
+    float: left;
+    font-family: Ubuntu;
+    font-weight: bold;
+    font-size: 19px;
+    color: white;
+    background-color: #2CB229;
+    transition: all 500ms ease;
+}
+button.DBCerrar:hover{
+    background-color: white;
+    color: #2CB229;
+}
+a.DAPerfil{
+    font-family: Anton;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    right: 20px;
+}
+a.DAPerfil:hover{
+    text-decoration: none;
+    color: white;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 0px;
+    padding-top: 0px;
+    text-align: center;
+}
+ul, ol {
+    list-style:none;
+}
+			
+.nav > li {
+    float:left;
+}
+			
+.nav li a {
+    margin-top: 9px;
+    background-color: #2CB229;
+    color: white;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    width: 220px;
+    height: 45px;
+    font-family: Ubuntu;
+    font-weight: bold;
+    display: block;
+    font-size: 18px;
+    transition: all 500ms ease;
+}
+li, a{
+    margin-top: -9px;
+    color: white;
+}	
+li:hover{
+    color: #2CB229;
+}
+.nav li a:hover {
+    background-color: white;
+    color: #2CB229;
+}			
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 180px;
+    border-radius: none;
+}
+			
+.nav li:hover > ul {
+    display: block;
+}
+			
+.nav li ul li {
+    position: relative;
+}
+			
+.nav li ul li ul {
+    right: -110px;
+    top: 0px;
+    margin-top: 0%;
+}
+/* Middle column */
+.column.middle {
+    font-family: 'Fjalla One', sans-serif;
+    width: 100%;
+    padding-top: 90px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    text-align: center;
+    background-color: white;
+    
+}
+
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  min-height: 600px;
+}
+body {
+  background-color: #222224;
+  background-image: linear-gradient(#17191f, #252a35);
+  height: 100%;
+  font-family: 'roboto', 'helvetica neue', arial, sans-serif;
+}
+.carousel {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.carousel:hover .slide:after,
+.carousel:hover .counter,
+.carousel:hover .slide:before {
+  opacity: 1;
+}
+.slide {
+  float: right;
+  position: absolute;
+  z-index: 1;
+  width: 600px;
+  height: 400px;
+  background-color: #eee;
+  text-align: center;
+  transition: opacity 0.7s;
+  opacity: 1;
+}
+.slide:before {
+  content: attr(annot);
+  display: block;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: rgba(255,255,255,0.9);
+  font-size: 14px;
+  font-weight: 300;
+  z-index: 12;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-shadow: 0 0 20px #000;
+}
+.slide:after {
+  content: attr(slide);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: opacity 0.3s;
+  width: 100%;
+  height: 120px;
+  opacity: 0;
+  background-image: linear-gradient(transparent, rgba(0,0,0,1));
+  text-align: left;
+  text-indent: 549px;
+  line-height: 101px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 0 1px #000;
+}
+.counter {
+  position: absolute;
+  bottom: 20px;
+  right: 1px;
+  height: 20px;
+  width: 60px;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  line-height: 21px;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.faux-ui-facia {
+  top: 0;
+  right: 0;
+  float: right;
+  position: absolute;
+  margin-top: 0;
+  z-index: 9;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.faux-ui-facia:checked {
+  z-index: 8;
+}
+.faux-ui-facia:checked + .slide {
+  opacity: 0;
+}
+.faux-ui-facia:checked:nth-child(1):checked {
+  z-index: 9;
+}
+.faux-ui-facia:nth-child(1):checked {
+  float: left;
+  z-index: 9;
+}
+.faux-ui-facia:nth-child(1):checked + .slide {
+  opacity: 1;
+}
+.faux-ui-facia:nth-child(1):checked ~ .faux-ui-facia {
+  float: left;
+  z-index: 8;
+}
+.faux-ui-facia:nth-child(1):checked ~ .faux-ui-facia + .slide {
+  opacity: 0;
+}
+.faux-ui-facia:nth-child(1):checked ~ .faux-ui-facia:checked {
+  z-index: 9;
+}
+.faux-ui-facia:nth-child(1):checked ~ .faux-ui-facia:checked + .slide {
+  opacity: 1;
+}
+/* --- Intro text --- */
+.intro {
+  padding: 80px 0 60px 0;
+  text-align: center;
+  color: #fff;
+  margin: auto;
+  width: 800px;
+}
+.intro .intro__title {
+  font-weight: 200;
+  font-size: 32px;
+  color: #fff;
+}
+.intro .intro__body {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  opacity: 0.48;
+  padding: 0 160px;
+  margin: 0;
+}
+
+a{
+  color: black;
+}
+
+a:hover{
+  color: green;
+}
+
+a:active{
+  color: red;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+table {
+    width:50%;
+    margin-bottom: 50px;
+    
+}
+table, th, td {
+    border: 2px solid white;
+    border-collapse: collapse;
+    text-align: center;
+}
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+}
+table#t01 th {
+    text-align: center;
+    background-color: #2CB229;
+    color: white;
+}
+input[type=submit]{
+    height: 39px;
+    width: 270px;
+    font-size: 17px;
+    border-bottom: 2px solid #2CC229;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: #FAFAFA;
+    color: #898989;
+}
+
+input[type=number]{
+    height: 39px;
+    width: 370px;
+    font-size: 17px;
+    border-bottom: 2px solid #2CC229;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: #FAFAFA;
+    color: #898989;
+}

@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="../IMGS/favicon.ico" rel='shortcut icon' type='image/x-icon'>
+          <link rel="stylesheet" href="../CSS/loginadmin.css">
+        <title>Solo Administradores</title>
+    </head>
+    <body>
+        <DIV>
+              <ul>
+  <li><a class="active" href="../index.html">Coins</a></li>
+
+ 
+</ul>
+        </DIV>
+        <div align="center">
+            
+        <h1>Inicia Sesion</h1>
+        <form action="validaradmin.jsp" name="validar">
+            <input type="text" name="nom" placeholder="Username"><br>
+            <input type="password" name="psw" placeholder="Contraseña"><br><BR>
+            <input type="submit" value="Iniciar Sesion">
+            
+        </form>
+        </div>
+        <script>
+        function noback(){
+   window.location.hash="no-back-button";
+   window.location.hash="Again-No-back-button"
+   window.onhashchange=function(){window.location.hash="no-back-button";}
+}
+        </script>
+    </body>
+    
+</html>
